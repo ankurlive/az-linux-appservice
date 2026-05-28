@@ -1,5 +1,5 @@
 module "linux-appservice" {
-  for_each = var.env == "npe" ? local.npe.linux_appservice : local.prd.linux_appservice
+  for_each = local.env == "npe" ? local.npe.linux_appservice : local.prd.linux_appservice
 
   source = "../modules/linux-appservice"
 
